@@ -614,7 +614,7 @@
 
 // Must follow `.find-me__social` so this margin-top is not clobbered by `margin: 0`
 ul.find-me__social.find-me__social--hero {
-  margin-top: clamp(4.5rem, 12vw, 7.5rem);
+  margin-top: clamp(2.5rem, 10vw, 1rem);
 }
 
 .find-me__social a {
