@@ -1,86 +1,754 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hasini Sumalee Perera — Full stack developer, researcher, and software engineer. Portfolio, experience, projects, and publications."
+    />
+    <meta name="author" content="Hasini Sumalee Perera" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>Hasini Sumalee Perera — Software Engineer &amp; Researcher</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to main content</a>
+    <header class="site-header" id="header">
+      <div class="site-header__inner container">
+        <nav class="nav" id="main-nav" aria-label="Page sections">
+          <ul class="nav__list" role="list">
+            <li><a href="#about" data-nav-link>About</a></li>
+            <li><a href="#experience" data-nav-link>Experience</a></li>
+            <li><a href="#skills" data-nav-link>Skills</a></li>
+            <li><a href="#education" data-nav-link>Education</a></li>
+            <li><a href="#projects" data-nav-link>Projects</a></li>
+            <li>
+              <a href="#research" data-nav-link>Research &amp; Publications</a>
+            </li>
+            <li><a href="#volunteer" data-nav-link>Volunteer</a></li>
+            <!-- <li><a href="#testimonials" data-nav-link>Testimonials</a></li> -->
+            <li><a href="#contact" data-nav-link>Contact</a></li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
 
-        <!--==================== UNICONS ====================-->
-        
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="">
+    <main id="main">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <h1 class="hero__title" id="hero-title">Hasini Perera</h1>
+          <p class="hero__role" id="hero-role">
+            <span class="hero__role-typed" aria-hidden="true">
+              <span class="hero__role-text" id="hero-role-text"></span><span class="hero__role-cursor" aria-hidden="true">|</span>
+            </span>
+            <!-- <span class="sr-only" id="hero-role-sr">Roles include full stack software engineer, researcher, and writer.</span> -->
+          </p>
+          <ul class="find-me__social find-me__social--hero" role="list" aria-label="Social and contact links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/hasini-s-perera/"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="LinkedIn (opens in a new tab)"
+                ><span class="sr-only">LinkedIn</span>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/hasinisperera"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="GitHub (opens in a new tab)"
+                ><span class="sr-only">GitHub</span>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/hasinisp"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="X (opens in a new tab)"
+                ><span class="sr-only">X</span>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.23zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <title>Responsive Portfolio Website</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-        </header>
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section__header about-section__header">
+            <span class="section__eyebrow">Introduction</span>
+            <h2 class="section__title" id="about-title">About me</h2>
+            <!-- <p class="section__lede">A snapshot in Polaroid and a few words in a “window”.</p> -->
+          </div>
+          <div class="about__grid">
+            <div class="about__polaroid">
+              <div class="about__polaroid-frame">
+                <div class="about__polaroid-inner">
+                  <img
+                    class="about__portrait"
+                    src="assets/img/Hasini_Portrait_New.png"
+                    alt="Portrait of Hasini Sumalee Perera"
+                    width="280"
+                    height="280"
+                    onerror="this.onerror=null;this.src='assets/img/profile-placeholder.svg';"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="about__polaroid-footer" role="presentation">
+                  <img
+                    width="28"
+                    height="28"
+                    src="https://cdn.simpleicons.org/react/61DAFB"
+                    alt="React"
+                    class="about__polaroid-tech-icon"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    width="28"
+                    height="28"
+                    src="https://cdn.simpleicons.org/nodedotjs/DD0031"
+                    alt="Node.js"
+                    class="about__polaroid-tech-icon"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    width="28"
+                    height="28"
+                    src="https://cdn.simpleicons.org/typescript/4FC08D"
+                    alt="TypeScript"
+                    class="about__polaroid-tech-icon"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="about__window" role="article" aria-label="About me in brief">
+              <div class="about__window-chrome" aria-hidden="true">
+                <span class="about__window-dot about__window-dot--red"></span>
+                <span class="about__window-dot about__window-dot--amber"></span>
+                <span class="about__window-dot about__window-dot--green"></span>
+              </div>
+              <div class="about__window-body">
+                <h3 class="about__window-hi">Hi :)</h3>
+                <p>
+                  👋 I&rsquo;m <strong>Hasini</strong>. I&rsquo;m a <strong>full stack software engineer</strong> and
+                  <strong>researcher</strong> based in Toronto, ON, Canada.
+                </p>
+                <p>
+                  I&rsquo;ve shipped end-to-end web features, mentored students, and published on code quality and
+                  technical debt. I care about <strong>testable</strong> systems, <strong>clear</strong> APIs, and
+                  interfaces people can actually use.
+                </p>
+                <p>Scroll on for work, research, and ways to <a href="#contact">connect</a> — I&rsquo;d love to hear from you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
-            </section>
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Professional</span>
+            <h2 class="section__title" id="experience-title">Experience</h2>
+          </div>
+          <div class="timeline" role="list">
+            <article class="exp-card" role="listitem">
+              <div class="exp-card__header">
+                <h3 class="exp-card__title">Full Stack Developer &middot; Hilltop Partner Network</h3>
+                <span class="exp-card__meta">Winnipeg, Canada &middot; Oct 2025 – Present</span>
+              </div>
+              <ul class="exp-card__list" role="list">
+                <li>
+                  Built responsive, reusable UI components for an AI-enabled SaaS platform using Next.js and TypeScript,
+                  delivering full features including subscription management, settings, and team management in an Agile
+                  environment.
+                </li>
+                <li>
+                  Developed end-to-end type-safe APIs using tRPC, bridging client-side features with server-side logic
+                  and eliminating an entire class of runtime type errors.
+                </li>
+                <li>
+                  Established a consistent design system and reusable component library using Tailwind CSS and shadcn,
+                  reducing UI development time across the team.
+                </li>
+                <li>
+                  Integrated Google Analytics to track the full user journey, giving marketing teams actionable data for
+                  long-term product adoption decisions.
+                </li>
+                <li>
+                  Maintained system stability by identifying and resolving critical production bugs promptly; wrote unit
+                  and integration tests using Vitest following Test Driven Development (TDD) practices.
+                </li>
+              </ul>
+            </article>
+            <article class="exp-card" role="listitem">
+              <div class="exp-card__header">
+                <h3 class="exp-card__title">Software Engineer &middot; EdTech Group (Pvt) Ltd</h3>
+                <span class="exp-card__meta">Colombo, Sri Lanka &middot; Apr 2022 – Jul 2022</span>
+              </div>
+              <ul class="exp-card__list" role="list">
+                <li>
+                  Optimized and debugged features for a parent-teacher communication app built with Angular, Node.js,
+                  and AWS; contributed to architectural and database schema design for a new product.
+                </li>
+              </ul>
+            </article>
+            <article class="exp-card" role="listitem">
+              <div class="exp-card__header">
+                <h3 class="exp-card__title">Software Engineer &middot; Orange Software (Pvt) Ltd</h3>
+                <span class="exp-card__meta">Colombo, Sri Lanka &middot; Apr 2021 – Apr 2022</span>
+              </div>
+              <ul class="exp-card__list" role="list">
+                <li>
+                  Contributed to an HR management platform now serving 5M+ users; built RESTful APIs in PHP/MySQL with
+                  TDD (PHPUnit), achieving 90% code coverage and measurably reducing post-deployment defects.
+                </li>
+                <li>
+                  Designed and implemented public REST APIs for open-source integrations with full Swagger documentation,
+                  enabling third-party developers to explore and test endpoints in real time.
+                </li>
+                <li>
+                  Built Angular frontend components for new product features and worked in a cross-functional
+                  Agile/Scrum team to consistently ship to production on schedule.
+                </li>
+              </ul>
+            </article>
+            <article class="exp-card" role="listitem">
+              <div class="exp-card__header">
+                <h3 class="exp-card__title">Trainee Software Engineer &middot; 99x</h3>
+                <span class="exp-card__meta">Colombo, Sri Lanka &middot; Jul 2020 – Feb 2021</span>
+              </div>
+              <ul class="exp-card__list" role="list">
+                <li>
+                  Contributed to a gamified learning platform used by thousands of learners worldwide; built Angular
+                  components and integrated the TinyMCE rich text editor for user-generated content.
+                </li>
+                <li>
+                  Designed and deployed serverless REST APIs using AWS Lambda, API Gateway, and Serverless Framework
+                  backed by MongoDB, following Agile development practices.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                
-            </section>
 
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Toolkit</span>
+            <h2 class="section__title" id="skills-title">Skills</h2>
+          </div>
+          <div class="skills__grid" role="list">
+            <div class="skill-pill" role="listitem">
+              <h3>Programming languages</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">JavaScript</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">PHP</span>
+              </div>
+            </div>
+            <div class="skill-pill" role="listitem">
+              <h3>Web Development Frameworks</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">Angular</span>
+                <span class="tag">React</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express.js</span>
+                <span class="tag">REST</span>
+                <span class="tag">Microservices</span>
+              </div>
+            </div>
+            <div class="skill-pill" role="listitem">
+              <h3>Databases</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+            <div class="skill-pill" role="listitem">
+              <h3>AI &amp; Machine Learning</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">NLP</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">RAG</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">PyTorch</span>
+              </div>
+            </div>
+            <div class="skill-pill" role="listitem">
+              <h3>Testing &amp; quality</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">TDD</span>
+                <span class="tag">Unit tests</span>
+                <span class="tag">Integration tests</span>
+                <span class="tag">PHPUnit</span>
+                <span class="tag">Vitest</span>
+              </div>
+            </div>
+            <div class="skill-pill" role="listitem">
+              <h3>Cloud &amp; serverless</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">AWS (Lambda, S3, API Gateway)</span>
+                <span class="tag">Azure (Function Apps, Blob)</span>
+                <span class="tag">Serverless</span>
+              </div>
+            </div>
+            <div class="skill-pill" role="listitem">
+              <h3>Tools &amp; OS</h3>
+              <div class="skill-pill__tags" role="list">
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">SVN</span>
+                <span class="tag">Docker</span>
+                <span class="tag">VS Code / Cursor</span>
+                <span class="tag">Windows</span>
+                <span class="tag">Linux</span>
+                <span class="tag">macOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            </section>
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Learning</span>
+            <h2 class="section__title" id="education-title">Education</h2>
+          </div>
+          <div class="timeline" style="max-width: 40rem; margin: 0 auto" role="list">
+            <article class="glass-card" role="listitem">
+              <h3>Master of Science in Computer Science</h3>
+              <p class="section__lede" style="margin: 0 0 0.5rem; font-size: 0.95rem">
+                University of Saskatchewan &middot; Canada &middot; Sep 2023 – Sep 2025
+              </p>
+              <p class="section__lede" style="margin: 0; font-size: 0.95rem">Grade: 87%</p>
+            </article>
+            <article class="glass-card" role="listitem">
+              <h3>Bachelor of Science (Honours) in Computer Science</h3>
+              <p class="section__lede" style="margin: 0 0 0.5rem; font-size: 0.95rem">
+                University of Sri Jayewardenepura &middot; Sri Lanka &middot; Dec 2016 – Dec 2020
+              </p>
+              <p class="section__lede" style="margin: 0; font-size: 0.95rem">GPA: 3.71/4.00 (First Class) &middot; Minors: Physics, Mathematics</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            </section>
 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-            </section>
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Builds &amp; research</span>
+            <h2 class="section__title" id="projects-title">Projects</h2>
+          </div>
+          <ul class="paper-list" role="list">
+            <li class="paper" role="listitem">
+              <div class="paper__head">
+                <p class="paper__type">Full stack</p>
+                <a
+                  class="paper__view"
+                  href="https://doi.org/10.5281/zenodo.15756660"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View project
+                  <svg
+                    class="icon-external"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="paper__title">ServLessSense: serverless smell detection</h3>
+              <ul class="paper__list" role="list">
+                <li>Static analysis for code smells in serverless JS/TS via a custom ESLint rule using ASTs.</li>
+                <li>React dashboard and Node.js API for code-quality metrics.</li>
+                <li>LLM-backed refactoring ideas via the OpenAI API and prompt design.</li>
+              </ul>
+            </li>
+            <li class="paper" role="listitem">
+              <div class="paper__head">
+                <p class="paper__type">NLP &amp; ML</p>
+                <a
+                  class="paper__view"
+                  href="https://doi.org/10.5281/zenodo.18371304"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View project
+                  <svg
+                    class="icon-external"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="paper__title">Technical debt in serverless (Stack Overflow)</h3>
+              <ul class="paper__list" role="list">
+                <li>Python pipeline to collect and process serverless questions from Stack Overflow.</li>
+                <li>Text classifiers using traditional ML and BERT for technical-debt content.</li>
+                <li>Achieved 86% accuracy in technical-debt content classification.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                
-            </section>
 
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Academic</span>
+            <h2 class="section__title" id="research-title">Research &amp; publications</h2>
+          </div>
+          <ul class="paper-list" role="list">
+            <li class="paper" role="listitem">
+              <div class="paper__head">
+                <p class="paper__type">Conference</p>
+                <a
+                  class="paper__view"
+                  href="https://arxiv.org/abs/2603.22480"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View publication
+                  <svg
+                    class="icon-external"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="paper__title">Investigating Technical Debt Types, Issues, and Solutions in Serverless Computing</h3>
+              <p class="paper__authors">
+                <strong>Authors:</strong> Perera, Hasini Sumalee, Zadia Codabux, and Fabio Palomba
+              </p>
+            </li>
+            <li class="paper" role="listitem">
+              <div class="paper__head">
+                <p class="paper__type">Conference</p>
+                <a
+                  class="paper__view"
+                  href="https://doi.org/10.1007/978-3-032-04403-7_3"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View publication
+                  <svg
+                    class="icon-external"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="paper__title">ServLessSense: Serverless Smell Detection Tool</h3>
+              <p class="paper__authors">
+                <strong>Authors:</strong> Perera, Hasini Sumalee, Zadia Codabux, and Fabio Palomba
+              </p>
+            </li>
+            <li class="paper" role="listitem">
+              <div class="paper__head">
+                <p class="paper__type">Journal</p>
+                <a
+                  class="paper__view"
+                  href="https://doi.org/10.3390/s23031550"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View publication
+                  <svg
+                    class="icon-external"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="paper__title">
+                Altering Fish Behavior by Sensing Swarm Patterns of Fish in an Artificial Aquatic Environment Using an
+                Interactive Robotic Fish
+              </h3>
+              <p class="paper__authors">
+                <strong>Authors:</strong> Manawadu, U. A., De Zoysa, M., Perera, J. D. H. S., Hettiarachchi, I. U., Lambacher, S. G., Premachandra, C., & De Silva, P. R. S.
+              </p>
+              <p class="paper__note"><i>Sensors</i>, 23(3), 1550 (2023)</p>
+            </li>
+            <li class="paper" role="listitem">
+              <div class="paper__head">
+                <p class="paper__type">Conference</p>
+                <a
+                  class="paper__view"
+                  href="https://doi.org/10.1109/ICIPRob54042.2022.9798455"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  View publication
+                  <svg
+                    class="icon-external"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="paper__title">Theatrical Robotic Actor Developed Using the Interpersonal Communication Principles</h3>
+              <p class="paper__authors">
+                <strong>Authors:</strong> Manawadu, U. A., Perera, J. D. H. S., Deepal, D. A. A., Fernando, W. A. R., & De Silva, P. R. S.
+              </p>
+              <!-- <p class="paper__note">2022 2nd International Conference on Image Processing and Robotics (ICIPRob), IEEE, pp. 1–7</p> -->
+            </li>
+          </ul>
+        </div>
+      </section>
 
-            </section>
 
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-                
-            </section>
+      <section class="section" id="volunteer" aria-labelledby="volunteer-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Community</span>
+            <h2 class="section__title" id="volunteer-title">Volunteer &amp; leadership</h2>
+          </div>
+          <div class="timeline" role="list">
+            <article class="exp-card" role="listitem">
+              <h3 class="exp-card__title" style="margin: 0 0 0.5rem; font-size: 1.05rem">
+                Computer Science Graduate Council &middot; University of Saskatchewan
+              </h3>
+              <p class="exp-card__meta">2024 – 2025</p>
+              <ul class="exp-card__list" role="list">
+                <li>Vice President – Social</li>
+              </ul>
+            </article>
+            <article class="exp-card" role="listitem">
+              <h3 class="exp-card__title" style="margin: 0 0 0.5rem; font-size: 1.05rem">
+                IEEE Student Branch &middot; University of Sri Jayewardenepura
+              </h3>
+              <p class="exp-card__meta">2018 – 2020</p>
+              <ul class="exp-card__list" role="list">
+                <li> Member</li>
+                <li> Content writer (IEEE USJ site)</li>
+              </ul>
+            </article>
+            <article class="exp-card" role="listitem">
+              <h3 class="exp-card__title" style="margin: 0 0 0.5rem; font-size: 1.05rem">
+                Computer Science Association &middot; University of Sri Jayewardenepura
+              </h3>
+              <p class="exp-card__org">2017 – 2019</p>
+              <ul class="exp-card__list" role="list">
+                <li>Co-Head, Workshops (2019)</li>
+                <li>Secretary, Gamefest (2018)</li>
+                <li>Organizing committee, Algorhythm (2019)</li>
+                <li>Interactions committee, Aurora (2017)</li>
+              </ul>
+            </article>
+            <article class="exp-card" role="listitem">
+              <h3 class="exp-card__title" style="margin: 0 0 0.5rem; font-size: 1.05rem">
+                Rotaract Club &middot; University of Sri Jayewardenepura
+              </h3>
+              <p class="exp-card__meta">2017 – 2018 &middot; “Rotaractor of The Year 2017/2018”</p>
+              <ul class="exp-card__list" role="list">
+                <li>Co–Main Coordinator, Installation Ceremony; Member, Member Relations Avenue</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
 
-            </section>
-        </main>
+      <!-- <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">What others say</span>
+            <h2 class="section__title" id="testimonials-title">Testimonials</h2>
+          </div>
+          <div class="empty-state" role="status" aria-live="polite">
+            <p>
+              <strong>Coming later.</strong> This section is empty on purpose. When you have references, we can add
+              them here.
+            </p>
+          </div>
+        </div>
+      </section> -->
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-         
-        </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
+      <section class="section section--find-me" id="contact" aria-labelledby="contact-title">
+        <div class="container" style="max-width: 44rem">
+          <div class="find-me" aria-label="Social profiles">
+            <div class="find-me__inner">
+              <h2 class="find-me__title" id="contact-title">Find Me On</h2>
+              <p class="find-me__sub">
+                Feel free to <span class="find-me__accent">connect</span> with me
+              </p>
+              <ul class="find-me__social" role="list">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/hasini-s-perera/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="LinkedIn (opens in a new tab)"
+                    ><span class="sr-only">LinkedIn</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/hasinisperera"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="GitHub (opens in a new tab)"
+                    ><span class="sr-only">GitHub</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://x.com/hasinisp"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="X (opens in a new tab)"
+                    ><span class="sr-only">X</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.23zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
+    <!-- <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Hasini Sumalee Perera. Built as a static site for GitHub Pages.</p>
+      </div>
+    </footer> -->
 
-        <!--==================== MAIN JS ====================-->
-        <script src=""></script>
-    </body>
+    <script src="assets/js/vendor/typed.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
 </html>

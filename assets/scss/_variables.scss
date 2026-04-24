@@ -1,0 +1,43 @@
+// Design tokens — dark theme: black, green, light text
+:root {
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --color-white: #ffffff;
+  --color-bg: #050505;
+  --color-bg-elevated: #111111;
+  --color-surface: #141414;
+  --color-chrome: #1e1e1e;
+  --color-polaroid-frame: #f0f0f0;
+  --color-black: #0a0a0a;
+  --color-border: rgba(22, 163, 74, 0.18);
+  --color-text: #f4f4f5;
+  --color-text-muted: #a1a1aa;
+  --color-accent: #22c55e;
+  --color-accent-hover: #4ade80;
+  --color-accent-dim: #16a34a;
+  --color-accent-light: #86efac;
+  --color-accent-soft: rgba(34, 197, 94, 0.12);
+  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 24px 48px rgba(22, 163, 74, 0.22);
+  --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --polaroid-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --header-h: 4rem;
+  --max-w: 1100px;
+  --section-pad: clamp(2.5rem, 6vw, 4.5rem);
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --z-header: 100;
+  --card-transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
+  /* Used for all card-like panels (thicker for visibility on dark background) */
+  --card-border-width: 2px;
+  --card-border: var(--card-border-width) solid var(--color-border);
+  --card-border-dashed: var(--card-border-width) dashed var(--color-border);
+}
