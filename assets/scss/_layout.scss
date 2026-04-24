@@ -76,54 +76,14 @@
 }
 
 .hero__role {
-  font-size: 1.2rem;
+  font-size: clamp(1.35rem, 2.8vw, 1.55rem);
+  line-height: 1.4;
   color: var(--color-text-muted);
   margin: 0;
-  min-height: 3.2em; /* keep layout stable when role text wraps on narrow screens */
+  min-height: 1.4em;
   display: block;
   text-align: center;
   width: 100%;
-}
-
-.hero__role-typed {
-  display: inline;
-}
-
-.hero__role-text {
-  display: inline;
-  color: var(--color-text-muted);
-}
-
-.hero__role-cursor {
-  display: inline;
-  color: var(--color-accent);
-  font-weight: 300;
-  margin-left: 1px;
-  animation: hero-cursor 1.05s steps(1, end) infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero__role-cursor {
-    animation: none;
-    opacity: 0.85;
-  }
-}
-
-@keyframes hero-cursor {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
-
-// Same visual language as contact “find me” icons — extra room below typing line
-.find-me__social--hero {
-  margin-top: clamp(2.75rem, 7vw, 4.25rem);
-  justify-content: center;
 }
 
 .btn {
@@ -650,6 +610,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+// Must follow `.find-me__social` so this margin-top is not clobbered by `margin: 0`
+ul.find-me__social.find-me__social--hero {
+  margin-top: clamp(4.5rem, 12vw, 7.5rem);
 }
 
 .find-me__social a {

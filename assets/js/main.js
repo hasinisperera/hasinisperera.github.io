@@ -24,7 +24,7 @@ const prefersReducedMotion = () => {
       return false;
     }
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  } catch {
+  } catch (e) {
     return false;
   }
 };
@@ -117,46 +117,3 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     }
   });
 });
-
-// Hero: rotating typewriter (Typed.js) — see assets/js/vendor/typed.min.js
-const HERO_ROLES = [
-  "Software Engineer",
-  "Full Stack Developer",
-  "Researcher",
-];
-
-function initHeroRoleTypewriter() {
-  const el =
-    document.getElementById("hero-role-text") ||
-    document.querySelector("#hero-role .hero__role-text");
-  if (!el) return;
-
-  if (prefersReducedMotion()) {
-    el.textContent = HERO_ROLES.join(" · ");
-    return;
-  }
-
-  if (typeof window.Typed === "undefined") {
-    el.textContent = HERO_ROLES.join(" · ");
-    return;
-  }
-
-  try {
-    new window.Typed(el, {
-      strings: HERO_ROLES,
-      typeSpeed: 48,
-      backSpeed: 32,
-      backDelay: 2200,
-      startDelay: 200,
-      smartBackspace: false,
-      loop: true,
-      showCursor: false,
-      contentType: null,
-      autoInsertCss: false,
-    });
-  } catch {
-    el.textContent = HERO_ROLES.join(" · ");
-  }
-}
-
-initHeroRoleTypewriter();
