@@ -34,7 +34,9 @@ function setMenuOpen(open) {
   nav.classList.toggle("is-open", open);
   toggle.setAttribute("aria-expanded", String(open));
   toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  document.body.style.overflow = open ? "hidden" : "";
+  const lock = open ? "hidden" : "";
+  document.documentElement.style.overflow = lock;
+  document.body.style.overflow = lock;
 }
 
 if (toggle && nav) {

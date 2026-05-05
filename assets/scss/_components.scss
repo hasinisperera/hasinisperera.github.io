@@ -1,4 +1,6 @@
-// Sticky header (dark)
+// Sticky header (dark). Note: backdrop-filter creates a containing block for
+// position:fixed descendants — the mobile drawer would be clipped to header height.
+// Blur is kept on desktop only; mobile uses a solid bar so the menu can fill the screen.
 .site-header {
   position: fixed;
   top: 0;
@@ -8,6 +10,9 @@
   height: var(--header-h);
   display: flex;
   align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
   background: rgba(17, 17, 17, 0.95);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
@@ -16,8 +21,33 @@
 }
 
 @media (max-width: 899px) {
+  .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(17, 17, 17, 0.98);
+    /* Padding so the menu button sits in the top-left (respecting safe area) */
+    padding-left: max(0.5rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
+    align-items: stretch;
+  }
+
   .site-header__inner {
-    justify-content: flex-end;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: var(--header-h);
+  }
+
+  .nav__toggle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: auto;
+    transform: translateY(-50%);
+    margin-left: 0;
   }
 }
 
@@ -26,23 +56,32 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--max-w);
+  min-width: 0;
+  max-width: min(var(--max-w), 100%);
   margin: 0 auto;
   padding: 0 var(--space-3);
   gap: var(--space-2);
 }
 
-// Nav
+// Nav — mobile: full-height panel below header (fixed to viewport, not header CB)
 .nav {
   position: fixed;
   top: var(--header-h);
   left: 0;
   right: 0;
-  bottom: 0;
   z-index: calc(var(--z-header) - 1);
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* Explicit height — do not use bottom:0 here; pairs badly with max-height on some engines */
+  height: calc(100vh - var(--header-h));
+  height: calc(100dvh - var(--header-h));
+  min-height: calc(100vh - var(--header-h));
+  min-height: calc(100dvh - var(--header-h));
   padding: var(--space-3);
+  padding-bottom: max(var(--space-3), env(safe-area-inset-bottom, 0px));
   background: var(--color-bg-elevated);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -52,8 +91,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: transform 0.25s ease, opacity 0.2s ease, visibility 0.2s;
-  max-height: calc(100vh - var(--header-h));
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .nav.is-open {
@@ -68,7 +106,15 @@
   flex-direction: column;
   gap: 0.5rem;
   margin: 0;
+  padding: 0;
   list-style: none;
+  width: 100%;
+  min-width: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .nav__list a {
@@ -80,6 +126,9 @@
   font-weight: 600;
   font-size: 0.9rem;
   font-family: var(--font-display);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 
   &:hover {
     background: var(--color-accent-soft);
@@ -99,13 +148,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: auto;
+    max-width: none;
+    height: auto;
+    min-height: 0;
     padding: 0;
     min-width: 0;
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: none;
-    max-height: none;
     transform: none;
     opacity: 1;
     visibility: visible;
@@ -119,7 +171,10 @@
     justify-content: center;
     gap: 0.4rem 1.15rem;
     max-width: 100%;
+    flex: 0 1 auto;
+    min-height: 0;
     overflow-x: auto;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     padding: 0.35rem 0;
   }
@@ -135,9 +190,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   padding: 0;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
@@ -171,6 +229,8 @@
 @media (min-width: 900px) {
   .nav__toggle {
     display: none;
+    position: static;
+    transform: none;
   }
 }
 
